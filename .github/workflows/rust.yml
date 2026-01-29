@@ -6,20 +6,20 @@ on:
   pull_request:
     branches: [ "main" ]
 
-  env:
-    CARGO_TERM_COLOR: always
+env:
+  CARGO_TERM_COLOR: always
 
-  jobs:
-    build:
+jobs:
+  build:
 
-      runs-on: windows-latest
+    runs-on: windows-latest
 
-      steps:
-      - uses: actions/checkout@v4
-      - name: build
-        run: cargo build
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: target
-          path: target
+    steps:
+    - uses: actions/checkout@v4
+    - name: build
+      run: cargo build
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: target
+        path: target
