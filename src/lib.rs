@@ -5,7 +5,7 @@ pub struct Spreadpages {
 
 impl Spreadpages {
     pub fn new(path: &str) -> Self {
-        Self sp = Self.default();
+        let mut sp = Self.default();
         sp.path = path.to_string();
         sp
     }
